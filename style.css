@@ -5,18 +5,19 @@
     --color-bg: #FCFCFC;
     --color-text-dark: #121212;
     --color-text-muted: #5A5A5A;
-    
-    --color-primary: #D31820; /* Education Red */
+
+    --color-primary: #D31820;
+    /* Education Red */
     --color-primary-hover: #B01018;
     --color-black: #0E0E10;
     --color-white: #FFFFFF;
-    
+
     --font-heading: 'Outfit', sans-serif;
     --font-body: 'Inter', sans-serif;
-    
+
     --transition-fast: 150ms ease;
     --transition-normal: 300ms ease;
-    
+
     --z-nav: 100;
 }
 
@@ -45,7 +46,12 @@ body {
 /* ==========================================================================
    Global Typography
    ========================================================================== */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: var(--font-heading);
     font-weight: 800;
     color: var(--color-text-dark);
@@ -167,7 +173,8 @@ h1, h2, h3, h4, h5, h6 {
 .nav-links {
     display: flex;
     gap: 2.5rem;
-    list-style: none; /* Explicit override to hide bullets */
+    list-style: none;
+    /* Explicit override to hide bullets */
 }
 
 .nav-links a {
@@ -179,7 +186,7 @@ h1, h2, h3, h4, h5, h6 {
     text-decoration: none;
 }
 
-.nav-links a:hover, 
+.nav-links a:hover,
 .nav-links a.active {
     color: var(--color-primary);
 }
@@ -205,7 +212,8 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 1440px;
     width: 100%;
     margin: 0 auto;
-    padding: 100px 4rem 0; /* Padding-top accounts for navbar height */
+    padding: 100px 4rem 0;
+    /* Padding-top accounts for navbar height */
     display: grid;
     grid-template-columns: 1.15fr 0.85fr;
     align-items: stretch;
@@ -672,7 +680,7 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 1;
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
 .wcu-image img {
@@ -695,7 +703,7 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     gap: 1rem;
     z-index: 2;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 .wcu-badge-number {
@@ -729,7 +737,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .testimonials-slider-track {
     display: flex;
-    width: 400%; /* 4 slides including the clone */
+    width: 400%;
+    /* 4 slides including the clone */
     animation: slide-carousel 15s infinite;
 }
 
@@ -746,15 +755,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @keyframes slide-carousel {
-    0%, 28.33% {
+
+    0%,
+    28.33% {
         transform: translateX(0);
     }
-    33.33%, 61.66% {
+
+    33.33%,
+    61.66% {
         transform: translateX(-25%);
     }
-    66.66%, 95% {
+
+    66.66%,
+    95% {
         transform: translateX(-50%);
     }
+
     100% {
         transform: translateX(-75%);
     }
@@ -764,14 +780,14 @@ h1, h2, h3, h4, h5, h6 {
     background-color: var(--color-white);
     padding: 2.5rem 2rem;
     border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
     border: 1px solid #F1F1F1;
     transition: transform var(--transition-normal);
 }
 
 .testimonial-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
 }
 
 .testimonial-rating {
@@ -932,7 +948,8 @@ h1, h2, h3, h4, h5, h6 {
     height: 18px;
 }
 
-.footer-links h4, .footer-contact h4 {
+.footer-links h4,
+.footer-contact h4 {
     font-size: 1.15rem;
     margin-bottom: 1.5rem;
     font-family: var(--font-heading);
@@ -1011,42 +1028,42 @@ h1, h2, h3, h4, h5, h6 {
     .navbar {
         height: 80px;
     }
-    
+
     .nav-container {
         padding: 0 2rem;
     }
-    
+
     .hero-container {
         grid-template-columns: 1fr;
         padding: 100px 2rem 0;
         gap: 3rem;
     }
-    
+
     .hero-content {
         padding: 1.5rem 0;
     }
-    
+
     .hero-graphic-area {
         height: 500px;
         min-height: auto;
     }
-    
+
     .bottom-bar {
         flex-direction: column;
     }
-    
+
     .features-row {
         flex-wrap: wrap;
         padding: 2.5rem 2rem;
         gap: 2rem;
         border-right: none;
     }
-    
+
     .feature-item {
         flex: 1 1 calc(50% - 1rem);
         min-width: 250px;
     }
-    
+
     .trusted-partner {
         width: 100%;
         padding: 2rem;
@@ -1057,19 +1074,19 @@ h1, h2, h3, h4, h5, h6 {
     .courses-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .wcu-grid {
         gap: 2rem;
     }
-    
+
     .testimonials-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .promo-banner {
         padding: 0 2rem 4rem;
     }
-    
+
     .promo-container {
         flex-direction: column;
         text-align: center;
@@ -1091,56 +1108,57 @@ h1, h2, h3, h4, h5, h6 {
     .courses-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .wcu-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .wcu-image-wrapper {
         margin-top: 2rem;
     }
-    
+
     .testimonials-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .section-title {
         font-size: 2rem;
     }
-    
+
     .promo-content h2 {
         font-size: 1.75rem;
     }
+
     .nav-right {
         display: none;
     }
-    
+
     .hero-title {
         font-size: 2.5rem;
     }
-    
+
     .hero-stats {
         grid-template-columns: repeat(2, 1fr);
         gap: 1.25rem;
     }
-    
+
     .stat-item {
         border-right: none;
     }
-    
+
     .hero-actions {
         flex-direction: column;
         width: 100%;
     }
-    
+
     .btn {
         width: 100%;
     }
-    
+
     .feature-item {
         flex: 1 1 100%;
     }
-    
+
     .footer-top {
         grid-template-columns: 1fr;
         gap: 2.5rem;
@@ -1157,7 +1175,8 @@ h1, h2, h3, h4, h5, h6 {
    About Page Styles
    ========================================================================== */
 .about-banner-section {
-    padding: 100px 0 0; /* Accounts for navbar */
+    padding: 100px 0 0;
+    /* Accounts for navbar */
     background-color: var(--color-bg);
 }
 
@@ -1171,7 +1190,7 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 0;
     overflow: hidden;
     position: relative;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     height: 500px;
     width: 100%;
 }
@@ -1243,7 +1262,7 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
 }
 
 .who-we-are-image img {
@@ -1258,9 +1277,11 @@ h1, h2, h3, h4, h5, h6 {
     .about-banner-container {
         padding: 0;
     }
+
     .about-banner {
         height: 400px;
     }
+
     .who-we-are-grid {
         gap: 3rem;
     }
@@ -1270,9 +1291,11 @@ h1, h2, h3, h4, h5, h6 {
     .about-banner-overlay {
         padding: 2rem;
     }
+
     .about-banner-content h1 {
         font-size: 2.5rem;
     }
+
     .who-we-are-grid {
         grid-template-columns: 1fr;
     }
@@ -1519,7 +1542,7 @@ details.module-card[open] .module-icon {
     border-radius: 0;
     overflow: hidden;
     position: relative;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     height: 400px;
     width: 100%;
 }
@@ -1576,7 +1599,7 @@ details.module-card[open] .module-icon {
     background-color: var(--color-white);
     padding: 2.5rem 2rem;
     border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
     border: 1px solid #F1F1F1;
     text-align: center;
     transition: transform var(--transition-normal), box-shadow var(--transition-normal);
@@ -1584,7 +1607,7 @@ details.module-card[open] .module-icon {
 
 .contact-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
 }
 
 .contact-icon-wrapper {
@@ -1633,7 +1656,7 @@ details.module-card[open] .module-icon {
     background-color: var(--color-white);
     padding: 3rem;
     border-radius: 20px;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
     border: 1px solid #F1F1F1;
 }
 
@@ -1704,7 +1727,7 @@ textarea.form-control {
 .contact-map-wrapper {
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
     height: 100%;
     min-height: 400px;
 }
@@ -1713,9 +1736,11 @@ textarea.form-control {
     .contact-info-grid {
         grid-template-columns: 1fr;
     }
+
     .contact-content-grid {
         grid-template-columns: 1fr;
     }
+
     .contact-map-wrapper {
         min-height: 350px;
     }
@@ -1725,13 +1750,62 @@ textarea.form-control {
     .contact-banner-overlay {
         padding: 2rem;
     }
+
     .contact-banner-content h1 {
         font-size: 2.5rem;
     }
+
     .form-row {
         grid-template-columns: 1fr;
     }
+
     .contact-form-wrapper {
         padding: 2rem;
+    }
+}
+
+/* ==========================================================================
+   WhatsApp Floating Icon
+   ========================================================================== */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-normal);
+}
+
+.whatsapp-float:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+    color: #FFF;
+}
+
+.whatsapp-float svg {
+    width: 35px;
+    height: 35px;
+}
+
+@media (max-width: 768px) {
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+    }
+    .whatsapp-float svg {
+        width: 28px;
+        height: 28px;
     }
 }
