@@ -740,7 +740,7 @@ h6 {
    Testimonials Section
    ========================================================================== */
 .testimonials-section {
-    padding: 2rem 0 6rem;
+    padding: 6rem 0;
     background-color: #F8FAFC;
 }
 
@@ -1116,6 +1116,45 @@ h6 {
     }
 }
 
+@media (max-width: 1024px) {
+    /* Success Stories Carousel to Swipeable Scroll Snap */
+    .testimonials-slider {
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 1.5rem;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+    
+    .testimonials-slider::-webkit-scrollbar {
+        display: none;
+    }
+
+    .testimonials-slider-track {
+        display: flex;
+        width: max-content;
+        animation: none;
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+
+    .testimonials-slide {
+        display: contents;
+    }
+
+    .testimonials-slide[aria-hidden="true"] {
+        display: none !important;
+    }
+
+    .success-card {
+        flex: 0 0 320px;
+        margin: 0;
+        scroll-snap-align: center;
+    }
+}
+
 @media (max-width: 768px) {
     .container {
         padding: 0 2rem;
@@ -1131,10 +1170,6 @@ h6 {
 
     .wcu-image-wrapper {
         margin-top: 2rem;
-    }
-
-    .testimonials-slide {
-        grid-template-columns: 1fr;
     }
 
     .section-title {
@@ -1209,6 +1244,117 @@ h6 {
         flex-direction: column;
         gap: 1rem;
         text-align: center;
+    }
+
+    /* Hero Graphic Area Adjustments */
+    .hero-graphic-area {
+        height: 340px;
+        min-height: auto;
+        margin-top: 1.5rem;
+    }
+
+    .shape-red-underlay {
+        width: 90%;
+        clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+
+    .shape-black-underlay {
+        width: 65%;
+        height: 40%;
+        clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+
+    .image-frame {
+        width: 87%;
+        clip-path: polygon(15% 0%, 100% 0%, 100% 70%, 70% 100%, 0% 100%);
+    }
+
+    /* Adjust success card flex basis on smaller tablet/mobile views */
+    .success-card {
+        flex: 0 0 290px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 0 1.25rem;
+    }
+
+    .hero-container {
+        padding: 100px 1.25rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Hero Title and Stats on small mobile */
+    .hero-title {
+        font-size: 2.1rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .hero-stats {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .hero-graphic-area {
+        height: 280px;
+    }
+
+    /* Success Card Layout on small mobile */
+    .success-card-middle {
+        flex-direction: column;
+        gap: 1.25rem;
+        text-align: center;
+        padding: 0 1rem;
+    }
+
+    .success-student-col {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+
+    .success-image-container {
+        width: 130px;
+        height: 140px;
+    }
+
+    .success-name-plate {
+        width: 100%;
+        max-width: 180px;
+        margin-top: -0.75rem;
+    }
+
+    .success-text-col {
+        text-align: center;
+    }
+
+    .success-text-col .started-text {
+        font-size: 1.1rem;
+    }
+
+    .success-text-col .offer-text {
+        font-size: 1.3rem;
+    }
+
+    .success-card-bottom {
+        padding: 1rem;
+    }
+
+    .success-details-box {
+        padding: 0.75rem;
+    }
+
+    .success-details-box li {
+        font-size: 0.72rem;
+    }
+
+    .success-details-box li span:first-child {
+        width: 90px;
     }
 }
 
@@ -2186,7 +2332,7 @@ textarea.form-control {
 
 .success-details-box li span:first-child {
     font-weight: 700;
-    width: 85px;
+    width: 100px;
     flex-shrink: 0;
 }
 
