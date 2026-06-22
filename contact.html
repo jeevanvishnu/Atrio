@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Atrio Education</title>
+    <meta name="description" content="Get in touch with Atrio Education. Find our location in Thalassery, contact number, and email.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Icons (Lucide) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/Logo.png" alt="Atrio Education" onerror="this.src='https://placehold.co/180x60/fff/000?text=ATRIO+EDUCATION'">
+                </a>
+            </div>
+            
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                </ul>
+                
+                <a href="contact.html" class="btn btn-primary nav-btn">
+                    <i data-lucide="phone"></i>
+                    <span>Contact Us</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Banner Section -->
+    <section class="contact-banner-section">
+        <div class="contact-banner-container">
+            <div class="contact-banner">
+                <img src="assets/about_banner.png" alt="Atrio Education Contact" onerror="this.src='https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2070'">
+                <div class="contact-banner-overlay">
+                    <div class="contact-banner-content">
+                        <h1>Get in <span class="text-red">Touch</span></h1>
+                        <p>We're here to answer your questions and help you start your professional journey with Atrio.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Content Section -->
+    <section class="contact-section">
+        <div class="container">
+            <!-- Contact Info Cards -->
+            <div class="contact-info-grid">
+                <div class="contact-card">
+                    <div class="contact-icon-wrapper">
+                        <i data-lucide="map-pin"></i>
+                    </div>
+                    <h3>Our Location</h3>
+                    <p>Thalassery, Kerala<br>India</p>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon-wrapper">
+                        <i data-lucide="phone"></i>
+                    </div>
+                    <h3>Call Us</h3>
+                    <p>+971 50 123 4567<br>+91 987 654 3210</p>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon-wrapper">
+                        <i data-lucide="mail"></i>
+                    </div>
+                    <h3>Email Us</h3>
+                    <p>info@atrioeducation.com<br>support@atrioeducation.com</p>
+                </div>
+            </div>
+
+            <!-- Form & Map -->
+            <div class="contact-content-grid">
+                <div class="contact-form-wrapper">
+                    <div class="contact-form-header">
+                        <h2>Send a <span class="text-red">Message</span></h2>
+                        <p>Fill out the form below and our team will get back to you within 24 hours.</p>
+                    </div>
+                    <form class="contact-form" action="#" method="POST">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name</label>
+                                <input type="text" id="firstName" name="firstName" class="form-control" placeholder="John" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" id="lastName" name="lastName" class="form-control" placeholder="Doe" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="john@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Course of Interest</label>
+                            <select id="subject" name="subject" class="form-control" required>
+                                <option value="" disabled selected>Select a course</option>
+                                <option value="digital-marketing">Digital Marketing</option>
+                                <option value="arabic-translation">Arabic Translation</option>
+                                <option value="office-management">Office Management</option>
+                                <option value="interior-design">Interior Design</option>
+                                <option value="other">Other Inquiry</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" class="form-control" rows="5" placeholder="How can we help you?" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg w-100">Send Message <i data-lucide="send"></i></button>
+                    </form>
+                </div>
+
+                <div class="contact-map-wrapper">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3903.6273418541995!2d75.48512117565369!3d11.751659988457026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba42617f09fcebd%3A0xc665796a5de0c1e!2sThalassery%2C%20Kerala!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="assets/Logo.png" alt="Atrio Education" onerror="this.src='https://placehold.co/180x60/0E0E10/fff?text=ATRIO+EDUCATION'" class="footer-logo">
+                    <p>Empowering professionals with industry-leading courses and expert guidance to shape their global future.</p>
+                    <div class="social-links">
+                        <a href="#"><i data-lucide="facebook"></i></a>
+                        <a href="#"><i data-lucide="instagram"></i></a>
+                        <a href="#"><i data-lucide="twitter"></i></a>
+                        <a href="#"><i data-lucide="linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Our Courses</h4>
+                    <ul>
+                        <li><a href="#">Digital Marketing</a></li>
+                        <li><a href="#">Arabic Translation</a></li>
+                        <li><a href="#">Office Management</a></li>
+                        <li><a href="#">Interior Design</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <ul class="contact-info">
+                        <li>
+                            <i data-lucide="map-pin"></i>
+                            <span>Thalassery</span>
+                        </li>
+                        <li>
+                            <i data-lucide="phone"></i>
+                            <span>+971 50 123 4567</span>
+                        </li>
+                        <li>
+                            <i data-lucide="mail"></i>
+                            <span>info@atrioeducation.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Atrio Education. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Sticky Navbar effect on scroll
+        const navbar = document.querySelector('.navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
