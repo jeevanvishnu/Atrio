@@ -1152,3 +1152,162 @@ h1, h2, h3, h4, h5, h6 {
         text-align: center;
     }
 }
+
+/* ==========================================================================
+   About Page Styles
+   ========================================================================== */
+.about-banner-section {
+    padding: 100px 0 0; /* Accounts for navbar */
+    background-color: var(--color-bg);
+}
+
+.about-banner-container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.about-banner {
+    border-radius: 0;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    height: 500px;
+    width: 100%;
+}
+
+.about-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-banner-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(14, 14, 16, 0.8), rgba(14, 14, 16, 0.2));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4rem;
+}
+
+.about-banner-content {
+    max-width: 600px;
+    color: var(--color-white);
+}
+
+.about-banner-content h1 {
+    font-size: 3.5rem;
+    color: var(--color-white);
+    margin-bottom: 1rem;
+    line-height: 1.1;
+    font-family: var(--font-heading);
+    font-weight: 900;
+}
+
+.about-banner-content p {
+    font-size: 1.1rem;
+    color: #E2E8F0;
+    font-weight: 500;
+}
+
+.who-we-are-section {
+    padding: 6rem 0;
+    background-color: var(--color-white);
+}
+
+.who-we-are-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 5rem;
+    align-items: center;
+}
+
+.who-we-are-content h2 {
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+    font-family: var(--font-heading);
+    font-weight: 900;
+    color: var(--color-text-dark);
+}
+
+.who-we-are-content p {
+    font-size: 1.05rem;
+    color: var(--color-text-muted);
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.who-we-are-image {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+}
+
+.who-we-are-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    aspect-ratio: 4/3;
+}
+
+@media (max-width: 1200px) {
+    .about-banner-container {
+        padding: 0;
+    }
+    .about-banner {
+        height: 400px;
+    }
+    .who-we-are-grid {
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-banner-overlay {
+        padding: 2rem;
+    }
+    .about-banner-content h1 {
+        font-size: 2.5rem;
+    }
+    .who-we-are-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.mission-section {
+    padding: 6rem 0;
+    background-color: #F8FAFC;
+    text-align: center;
+}
+
+.mission-content {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mission-icon {
+    width: 48px;
+    height: 48px;
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+}
+
+.mission-content h2 {
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+    font-family: var(--font-heading);
+    font-weight: 900;
+}
+
+.mission-content p {
+    font-size: 1.15rem;
+    color: var(--color-text-muted);
+    line-height: 1.8;
+}
