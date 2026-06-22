@@ -30,7 +30,11 @@
                     onerror="this.src='https://placehold.co/180x60/fff/000?text=ATRIO+EDUCATION'">
             </div>
 
-            <div class="nav-right">
+            <button class="mobile-menu-btn" aria-label="Toggle menu" id="mobileMenuBtn">
+                <i data-lucide="menu" id="menuIcon"></i>
+            </button>
+
+            <div class="nav-right" id="navRight">
                 <ul class="nav-links">
                     <li><a href="#home" class="active">Home</a></li>
                     <li><a href="about.html">About</a></li>
@@ -107,10 +111,10 @@
 
                 <!-- Action Buttons -->
                 <div class="hero-actions">
-                    <a href="#apply" class="btn btn-primary btn-lg">
+                    <a href="contact.html" class="btn btn-primary btn-lg">
                         Apply Now <i data-lucide="arrow-right"></i>
                     </a>
-                    <a href="#consult" class="btn btn-outline btn-lg">
+                    <a href="contact.html" class="btn btn-outline btn-lg">
                         Free Consultation <i data-lucide="arrow-right"></i>
                     </a>
                 </div>
@@ -612,7 +616,7 @@
                         class="text-red font-bold">Free Career Consultation</span>, and let us guide your success.</p>
             </div>
             <div class="promo-action">
-                <a href="#apply" class="btn btn-primary btn-lg">Claim Your Session</a>
+                <a href="contact.html" class="btn btn-primary btn-lg">Claim Your Session</a>
             </div>
         </div>
     </section>
@@ -628,7 +632,7 @@
                     <p>Empowering professionals with industry-leading courses and expert guidance to shape their global
                         future.</p>
                     <div class="social-links">
-                        <a href="https://wa.me/971501234567" target="_blank" rel="noopener noreferrer"
+                        <a href="https://wa.me/918089445307" target="_blank" rel="noopener noreferrer"
                             aria-label="WhatsApp">
                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
                                 viewBox="0 0 16 16">
@@ -689,7 +693,7 @@
                         </li>
                         <li>
                             <i data-lucide="phone"></i>
-                            <span>+971 50 123 4567</span>
+                            <span>+91 8089 445 307<br>+91 8089 445 407</span>
                         </li>
                         <li>
                             <i data-lucide="mail"></i>
@@ -713,6 +717,23 @@
         // Initialize Lucide icons
         lucide.createIcons();
 
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navRight = document.getElementById('navRight');
+        const menuIcon = document.getElementById('menuIcon');
+
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', () => {
+                navRight.classList.toggle('active');
+                if (navRight.classList.contains('active')) {
+                    menuIcon.setAttribute('data-lucide', 'x');
+                } else {
+                    menuIcon.setAttribute('data-lucide', 'menu');
+                }
+                lucide.createIcons();
+            });
+        }
+
         // Sticky Navbar effect on scroll
         const navbar = document.querySelector('.navbar');
         window.addEventListener('scroll', () => {
@@ -724,7 +745,7 @@
         });
     </script>
     <!-- WhatsApp Floating Icon -->
-    <a href="https://wa.me/971501234567" class="whatsapp-float" target="_blank" rel="noopener noreferrer"
+    <a href="https://wa.me/918089445307" class="whatsapp-float" target="_blank" rel="noopener noreferrer"
         aria-label="Chat on WhatsApp">
         <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" viewBox="0 0 16 16">
             <path

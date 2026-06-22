@@ -32,6 +32,8 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    max-width: 100%;
 }
 
 body {
@@ -40,6 +42,7 @@ body {
     color: var(--color-text-dark);
     line-height: 1.5;
     overflow-x: hidden;
+    max-width: 100%;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -123,6 +126,20 @@ h6 {
 /* ==========================================================================
    Navigation Bar
    ========================================================================== */
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--color-text-dark);
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.mobile-menu-btn i {
+    width: 28px;
+    height: 28px;
+}
+
 .navbar {
     position: fixed;
     top: 0;
@@ -1079,7 +1096,7 @@ h6 {
         gap: 2rem;
     }
 
-    .testimonials-grid {
+    .testimonials-slide {
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -1117,7 +1134,7 @@ h6 {
         margin-top: 2rem;
     }
 
-    .testimonials-grid {
+    .testimonials-slide {
         grid-template-columns: 1fr;
     }
 
@@ -1129,8 +1146,33 @@ h6 {
         font-size: 1.75rem;
     }
 
+    .mobile-menu-btn {
+        display: block;
+    }
+
     .nav-right {
         display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--color-white);
+        flex-direction: column;
+        padding: 2rem;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        gap: 1.5rem;
+        border-top: 1px solid #E2E8F0;
+    }
+
+    .nav-right.active {
+        display: flex;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        gap: 1.5rem;
     }
 
     .hero-title {
@@ -1809,4 +1851,55 @@ textarea.form-control {
         width: 28px;
         height: 28px;
     }
+}
+/* ==========================================================================
+   Contact Strip Banner
+   ========================================================================== */
+.contact-strip-banner {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 1.5rem 0;
+    width: 100%;
+}
+
+.contact-strip-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.contact-strip-item {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.contact-strip-icon {
+    width: 48px;
+    height: 48px;
+    border: 2px solid var(--color-white);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.contact-strip-icon i {
+    width: 24px;
+    height: 24px;
+}
+
+.contact-strip-text p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.contact-strip-text strong {
+    font-weight: 800;
+    font-size: 1.25rem;
+    letter-spacing: 0.02em;
 }
