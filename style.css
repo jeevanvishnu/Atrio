@@ -266,7 +266,7 @@ h6 {
 /* Stats / Courses Badges */
 .hero-stats {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
     margin-bottom: 3rem;
     width: 100%;
@@ -276,7 +276,6 @@ h6 {
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    border-right: 1px solid #E2E8F0;
     padding-right: 0.5rem;
 }
 
@@ -480,7 +479,7 @@ h6 {
 
 .courses-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
 }
 
