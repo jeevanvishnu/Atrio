@@ -82,6 +82,7 @@ h1, h2, h3, h4, h5, h6 {
     cursor: pointer;
     transition: all var(--transition-normal);
     border: 2px solid transparent;
+    text-decoration: none;
 }
 
 .btn-lg {
@@ -175,6 +176,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.05rem;
     color: var(--color-text-dark);
     transition: color var(--transition-fast);
+    text-decoration: none;
 }
 
 .nav-links a:hover, 
@@ -718,10 +720,44 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #F8FAFC;
 }
 
-.testimonials-grid {
+.testimonials-slider {
+    width: 100%;
+    overflow: hidden;
+    padding: 1rem 0 3rem;
+    position: relative;
+}
+
+.testimonials-slider-track {
+    display: flex;
+    width: 400%; /* 4 slides including the clone */
+    animation: slide-carousel 15s infinite;
+}
+
+.testimonials-slider-track:hover {
+    animation-play-state: paused;
+}
+
+.testimonials-slide {
+    width: 25%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
+    flex-shrink: 0;
+}
+
+@keyframes slide-carousel {
+    0%, 28.33% {
+        transform: translateX(0);
+    }
+    33.33%, 61.66% {
+        transform: translateX(-25%);
+    }
+    66.66%, 95% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(-75%);
+    }
 }
 
 .testimonial-card {
