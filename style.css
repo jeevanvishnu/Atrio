@@ -306,16 +306,9 @@ h6 {
 }
 
 .stat-text h4 {
-    font-size: 1.05rem;
+    font-size: 0.95rem;
     font-weight: 800;
     color: var(--color-text-dark);
-    line-height: 1.2;
-}
-
-.stat-text p {
-    font-size: 0.85rem;
-    color: var(--color-text-muted);
-    font-weight: 500;
     line-height: 1.2;
 }
 
@@ -1691,18 +1684,6 @@ h6 {
 
     .stat-item {
         border-right: none;
-    }
-
-    .stat-text {
-        flex-direction: row;
-        align-items: baseline;
-        gap: 0.3rem;
-    }
-
-    .stat-text p {
-        font-weight: 800;
-        font-size: 1.05rem;
-        color: var(--color-text-dark);
     }
 
     .hero-actions {
