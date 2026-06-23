@@ -1611,9 +1611,15 @@ h6 {
     .trainers-grid {
         grid-template-columns: 1fr;
     }
-
     .career-grid {
         grid-template-columns: 1fr;
+    }
+
+    .career-card {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .gallery-grid {
