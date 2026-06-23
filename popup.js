@@ -1,8 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Check if popup has already been shown in this session
-    if (sessionStorage.getItem('atrioPopupShown')) {
-        return;
-    }
 
     let popupInjected = false;
     let popupVisible = false;
@@ -217,4 +213,18 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     window.addEventListener('scroll', handleScroll);
+
+    // Setup manual trigger buttons
+    const setupTriggerButtons = () => {
+        const triggerBtns = document.querySelectorAll('.trigger-popup-btn');
+        triggerBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                openPopup();
+            });
+        });
+    };
+    
+    // Initialize manual triggers
+    setupTriggerButtons();
 });
