@@ -141,7 +141,11 @@
                             <textarea id="message" name="message" class="form-control" rows="5"
                                 placeholder="How can we help you?" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-lg w-100">Send Message <i
+                        <div id="contact-success-msg" class="popup-success-msg" style="display: none; margin-bottom: 1rem;">
+                            <i data-lucide="check-circle" style="color: #2e7d32; width: 18px; height: 18px; margin-right: 8px;"></i>
+                            Thanks! Your message has been sent successfully.
+                        </div>
+                        <button type="submit" id="contact-submit-btn" class="btn btn-primary btn-lg w-100">Send Message <i
                                 data-lucide="send"></i></button>
                     </form>
                 </div>
@@ -281,6 +285,41 @@
                 navbar.classList.remove('scrolled');
             }
         });
+
+        // Contact Form Submission Handler
+        const contactForm = document.querySelector('.contact-form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                const successMsg = document.getElementById('contact-success-msg');
+                const submitBtn = document.getElementById('contact-submit-btn');
+                const originalBtnText = submitBtn.innerHTML;
+                
+                // Show submitting state
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = 'Sending... <i data-lucide="loader-2" class="lucide-spin"></i>';
+                lucide.createIcons();
+                
+                // Simulate form submission
+                setTimeout(() => {
+                    successMsg.style.display = 'flex';
+                    submitBtn.innerHTML = 'Sent Successfully! <i data-lucide="check"></i>';
+                    lucide.createIcons();
+                    
+                    // Reset form fields
+                    contactForm.reset();
+                    
+                    // Reset button and hide success message after 5 seconds
+                    setTimeout(() => {
+                        successMsg.style.display = 'none';
+                        submitBtn.disabled = false;
+                        submitBtn.innerHTML = originalBtnText;
+                        lucide.createIcons();
+                    }, 5000);
+                }, 1000);
+            });
+        }
     </script>
     <!-- WhatsApp Floating Icon -->
     <a href="https://wa.me/918089445307" class="whatsapp-float" target="_blank" rel="noopener noreferrer"
