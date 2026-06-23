@@ -407,7 +407,6 @@ h6 {
     padding: 2.5rem 4rem;
     gap: 3rem;
     justify-content: space-between;
-    border-right: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .feature-item {
@@ -1651,7 +1650,9 @@ h6 {
     }
 
     .mobile-menu-btn {
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .nav-right {
@@ -1684,12 +1685,24 @@ h6 {
     }
 
     .hero-stats {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
         gap: 1.25rem;
     }
 
     .stat-item {
         border-right: none;
+    }
+
+    .stat-text {
+        flex-direction: row;
+        align-items: baseline;
+        gap: 0.3rem;
+    }
+
+    .stat-text p {
+        font-weight: 800;
+        font-size: 1.05rem;
+        color: var(--color-text-dark);
     }
 
     .hero-actions {
@@ -1750,8 +1763,20 @@ h6 {
         padding: 0 1.25rem;
     }
 
+    .nav-container {
+        padding: 0 1.25rem;
+    }
+
+    .navbar {
+        height: 70px;
+    }
+
+    .logo img {
+        height: 42px;
+    }
+
     .hero-container {
-        padding: 100px 1.25rem 0;
+        padding: 90px 1.25rem 0;
     }
 }
 
@@ -3331,4 +3356,17 @@ textarea.form-control {
         width: 100%;
         padding: 0.85rem 1.2rem;
     }
+}
+
+/* ==========================================================================
+   Contact Links
+   ========================================================================== */
+.contact-link {
+    color: inherit;
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.contact-link:hover {
+    color: var(--color-primary);
 }
