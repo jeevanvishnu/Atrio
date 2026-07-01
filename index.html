@@ -155,18 +155,41 @@
 
         <!-- Right Graphic / Portrait Area -->
         <div class="hero-graphic-area">
-          <!-- Red offset background shape -->
-          <div class="shape-red-underlay"></div>
+          <!-- Ambient glowing gradients instead of harsh flat shapes -->
+          <div class="glow-blob glow-red"></div>
+          <div class="glow-blob glow-black"></div>
 
-          <!-- Black overlay shape behind the cutout -->
-          <div class="shape-black-underlay"></div>
+          <!-- Futuristic 3D Floating Video Card -->
+          <div class="video-3d-card-wrapper">
+            <div class="video-3d-card">
+              <!-- Screen bezel/inner frame effect -->
+              <div class="video-screen-frame">
+                <video
+                  id="heroVideo"
+                  autoplay
+                  loop
+                  muted
+                  playsinline
+                  preload="auto"
+                  class="hero-video"
+                >
+                  <source src="assets/artio-hero.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                
+                <!-- Video tint & reflection overlay -->
+                <div class="video-overlay"></div>
+                
+                <!-- Integrated bottom control bar -->
+                <div class="video-control-bar">
+                  <div class="video-status-dot">
+                    <span class="pulse-dot"></span>
+                    <span class="status-text">LIVE DEMO</span>
+                  </div>
+                </div>
 
-          <!-- Main Image frame with diagonal cuts -->
-          <div class="image-frame">
-            <img
-              src="assets/hero_student.png"
-              alt="Atrio Student & Dubai Skyline"
-            />
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1863,6 +1886,72 @@
           navbar.classList.remove("scrolled");
         }
       });
+
+      // Hero Video Controls and Intersection Observer
+      const heroVideo = document.getElementById("heroVideo");
+      const playPauseBtn = document.getElementById("videoPlayPause");
+      const muteUnmuteBtn = document.getElementById("videoMuteUnmute");
+
+      if (heroVideo) {
+        // Play/Pause button interaction
+        if (playPauseBtn) {
+          playPauseBtn.addEventListener("click", () => {
+            const icon = playPauseBtn.querySelector("i");
+            if (heroVideo.paused) {
+              heroVideo.play().catch(err => console.log("Video play interrupted:", err));
+              playPauseBtn.setAttribute("aria-label", "Pause Video");
+              playPauseBtn.setAttribute("title", "Pause Video");
+              if (icon) icon.setAttribute("data-lucide", "pause");
+            } else {
+              heroVideo.pause();
+              playPauseBtn.setAttribute("aria-label", "Play Video");
+              playPauseBtn.setAttribute("title", "Play Video");
+              if (icon) icon.setAttribute("data-lucide", "play");
+            }
+            if (window.lucide) {
+              window.lucide.createIcons();
+            }
+          });
+        }
+
+        // Mute/Unmute button interaction
+        if (muteUnmuteBtn) {
+          muteUnmuteBtn.addEventListener("click", () => {
+            const icon = muteUnmuteBtn.querySelector("i");
+            heroVideo.muted = !heroVideo.muted;
+            if (heroVideo.muted) {
+              muteUnmuteBtn.setAttribute("aria-label", "Unmute Video");
+              muteUnmuteBtn.setAttribute("title", "Unmute Video");
+              if (icon) icon.setAttribute("data-lucide", "volume-x");
+            } else {
+              muteUnmuteBtn.setAttribute("aria-label", "Mute Video");
+              muteUnmuteBtn.setAttribute("title", "Mute Video");
+              if (icon) icon.setAttribute("data-lucide", "volume-2");
+            }
+            if (window.lucide) {
+              window.lucide.createIcons();
+            }
+          });
+        }
+
+        // Intersection Observer to pause/play video based on visibility
+        if ("IntersectionObserver" in window) {
+          const videoObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                // Autoplay video only if it was not explicitly paused by the user
+                const isPausedByUser = playPauseBtn && playPauseBtn.getAttribute("aria-label") === "Play Video";
+                if (!isPausedByUser) {
+                  heroVideo.play().catch(err => console.log("Autoplay failed:", err));
+                }
+              } else {
+                heroVideo.pause();
+              }
+            });
+          }, { threshold: 0.15 });
+          videoObserver.observe(heroVideo);
+        }
+      }
     </script>
     <!-- WhatsApp Floating Icon -->
     <a
