@@ -270,23 +270,21 @@
             </div>
         </div>
     </footer>
-
-    <script>
+    <script>
         // Initialize Lucide icons
         lucide.createIcons();
 
         // Mobile Menu Toggle
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
         const navRight = document.getElementById('navRight');
-        const menuIcon = document.getElementById('menuIcon');
         
         if (mobileMenuBtn) {
             mobileMenuBtn.addEventListener('click', () => {
                 navRight.classList.toggle('active');
                 if (navRight.classList.contains('active')) {
-                    menuIcon.setAttribute('data-lucide', 'x');
+                    mobileMenuBtn.innerHTML = '<i data-lucide="x"></i>';
                 } else {
-                    menuIcon.setAttribute('data-lucide', 'menu');
+                    mobileMenuBtn.innerHTML = '<i data-lucide="menu"></i>';
                 }
                 lucide.createIcons();
             });

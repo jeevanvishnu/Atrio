@@ -303,9 +303,9 @@
             mobileMenuBtn.addEventListener('click', () => {
                 navRight.classList.toggle('active');
                 if (navRight.classList.contains('active')) {
-                    menuIcon.setAttribute('data-lucide', 'x');
+                    mobileMenuBtn.innerHTML = '<i data-lucide="x"></i>';
                 } else {
-                    menuIcon.setAttribute('data-lucide', 'menu');
+                    mobileMenuBtn.innerHTML = '<i data-lucide="menu"></i>';
                 }
                 lucide.createIcons();
             });
