@@ -1,48 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Atrio Education</title>
-    <meta name="description"
-        content="Get in touch with Atrio Education. Find our location in Thalassery, contact number, and email.">
-
+    <title>Interior Designing Syllabus - Atrio Education</title>
+    <meta name="description" content="Detailed syllabus for our Interior Designing course.">
+    
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap"
-        rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
     <!-- Icons (Lucide) -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
     <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">
-                <a href="index.html">
-                    <img src="assets/Logo.png" alt="Atrio Education"
-                        onerror="this.src='https://placehold.co/180x60/fff/000?text=ATRIO+EDUCATION'">
-                </a>
+                <img src="assets/Logo.png" alt="Atrio Education" onerror="this.src='https://placehold.co/180x60/fff/000?text=ATRIO+EDUCATION'">
             </div>
 
             <button class="mobile-menu-btn" aria-label="Toggle menu" id="mobileMenuBtn">
                 <i data-lucide="menu" id="menuIcon"></i>
             </button>
-
+            
             <div class="nav-right" id="navRight">
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="courses.html">Courses</a></li>
                 </ul>
-
+                
                 <a href="contact.html" class="btn btn-primary nav-btn">
                     <i data-lucide="phone"></i>
                     <span>Contact Us</span>
@@ -51,116 +43,142 @@
         </div>
     </nav>
 
-    <!-- Contact Banner Section -->
-    <section class="contact-banner-section">
-        <div class="contact-banner-container">
-            <div class="contact-banner">
-                <img src="assets/about_banner.png" alt="Atrio Education Contact"
-                    onerror="this.src='https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2070'">
-                <div class="contact-banner-overlay">
-                    <div class="contact-banner-content">
-                        <h1>Get in <span class="text-red">Touch</span></h1>
-                        <p>We're here to answer your questions and help you start your professional journey with Atrio.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Content Section -->
-    <section class="contact-section">
+    <!-- Syllabus Header -->
+    <header class="syllabus-header">
         <div class="container">
-            <!-- Contact Info Cards -->
-            <div class="contact-info-grid">
-                <div class="contact-card">
-                    <div class="contact-icon-wrapper">
-                        <i data-lucide="map-pin"></i>
-                    </div>
-                    <h3>Our Location</h3>
-                    <p>Thalassery, Kerala<br>India</p>
-                </div>
+            <h1>Interior Designing <span class="text-red">Syllabus</span></h1>
+            <p>Master SEO, social media, and performance marketing with our comprehensive 12-week program designed for absolute beginners and professionals.</p>
+        </div>
+    </header>
 
-                <div class="contact-card">
-                    <div class="contact-icon-wrapper">
-                        <i data-lucide="phone"></i>
-                    </div>
-                    <h3>Call Us</h3>
-                    <p><a href="tel:+918089445307" class="contact-link">+91 8089 445 307</a><br><a href="tel:+918089445407" class="contact-link">+91 8089 445 407</a></p>
-                </div>
-
-                <div class="contact-card">
-                    <div class="contact-icon-wrapper">
-                        <i data-lucide="mail"></i>
-                    </div>
-                    <h3>Email Us</h3>
-                    <p><a href="mailto:info@atrioeducation.com" class="contact-link">info@atrioeducation.com</a><br><a href="mailto:support@atrioeducation.com" class="contact-link">support@atrioeducation.com</a></p>
+    <!-- Info Bar -->
+    <div class="syllabus-info-bar">
+        <div class="info-bar-grid">
+            <div class="info-item">
+                <i data-lucide="clock"></i>
+                <div class="info-item-text">
+                    <span>Duration</span>
+                    <span>12 Weeks</span>
                 </div>
             </div>
-
-            <!-- Form & Map -->
-            <div class="contact-content-grid">
-                <div class="contact-form-wrapper">
-                    <div class="contact-form-header">
-                        <h2>Send a <span class="text-red">Message</span></h2>
-                        <p>Fill out the form below and our team will get back to you within 24 hours.</p>
-                    </div>
-                    <form class="contact-form" action="#" method="POST">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="firstName">First Name</label>
-                                <input type="text" id="firstName" name="firstName" class="form-control"
-                                    placeholder="First Name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="lastName">Last Name</label>
-                                <input type="text" id="lastName" name="lastName" class="form-control" placeholder="Last Name"
-                                    required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" class="form-control"
-                                placeholder="Email Address" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">Course of Interest</label>
-                            <select id="subject" name="subject" class="form-control" required>
-                                <option value="" disabled selected>Select a course</option>
-                                <option value="financial-accounting">Financial Accounting</option>
-                                <option value="office-administration">Office Administration</option>
-                                <option value="arabic-translation">Arabic Translation</option>
-                                <option value="digital-marketing">Digital Marketing</option>
-                                <option value="typewriting">English & Arabic Typewriting</option>
-                                <option value="spoken">Spoken English & Arabic</option>
-                                <option value="interior-designing">Interior Designing</option>
-                                <option value="other">Other Inquiry</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Your Message</label>
-                            <textarea id="message" name="message" class="form-control" rows="5"
-                                placeholder="How can we help you?" required></textarea>
-                        </div>
-                        <div id="contact-success-msg" class="popup-success-msg" style="display: none; margin-bottom: 1rem;">
-                            <i data-lucide="check-circle" style="color: #2e7d32; width: 18px; height: 18px; margin-right: 8px;"></i>
-                            Thanks! Your message has been sent successfully.
-                        </div>
-                        <button type="submit" id="contact-submit-btn" class="btn btn-primary btn-lg w-100">Send Message <i
-                                data-lucide="send"></i></button>
-                    </form>
+            <div class="info-item">
+                <i data-lucide="users"></i>
+                <div class="info-item-text">
+                    <span>Format</span>
+                    <span>Online & Offline</span>
                 </div>
-
-                <div class="contact-map-wrapper">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3903.6273418541995!2d75.48512117565369!3d11.751659988457026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba42617f09fcebd%3A0xc665796a5de0c1e!2sThalassery%2C%20Kerala!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
-                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
+            </div>
+            <div class="info-item">
+                <i data-lucide="award"></i>
+                <div class="info-item-text">
+                    <span>Certification</span>
+                    <span>Professional Diploma</span>
                 </div>
             </div>
         </div>
+    </div>
+
+    <!-- Curriculum -->
+    <section class="syllabus-content">
+        <div class="container curriculum-container">
+            <h2 class="curriculum-title">Course <span class="text-red">Curriculum</span></h2>
+
+            <!-- Module 1 -->
+            <details class="module-card" open>
+                <summary>
+                    <span class="module-week">Week 1-2</span>
+                    <span class="module-title">Introduction to Interior Designing</span>
+                    <i data-lucide="chevron-down" class="module-icon"></i>
+                </summary>
+                <div class="module-content">
+                    <p>Understand the fundamentals of Interior Designing and how it differs from traditional marketing. Learn to set up a Interior Designing strategy.</p>
+                    <ul>
+                        <li>Overview of Interior Designing channels</li>
+                        <li>Understanding Buyer Personas</li>
+                        <li>Competitor Analysis & Market Research</li>
+                        <li>Setting KPIs and Goals</li>
+                    </ul>
+                </div>
+            </details>
+            
+            <!-- Module 2 -->
+            <details class="module-card">
+                <summary>
+                    <span class="module-week">Week 3-5</span>
+                    <span class="module-title">Search Engine Optimization (SEO)</span>
+                    <i data-lucide="chevron-down" class="module-icon"></i>
+                </summary>
+                <div class="module-content">
+                    <p>Master the art of ranking on Google. Learn on-page, off-page, and technical SEO strategies.</p>
+                    <ul>
+                        <li>Keyword Research and Planning</li>
+                        <li>On-Page SEO Optimization</li>
+                        <li>Link Building Strategies</li>
+                        <li>Google Search Console & Analytics</li>
+                    </ul>
+                </div>
+            </details>
+
+            <!-- Module 3 -->
+            <details class="module-card">
+                <summary>
+                    <span class="module-week">Week 6-8</span>
+                    <span class="module-title">Social Media Marketing</span>
+                    <i data-lucide="chevron-down" class="module-icon"></i>
+                </summary>
+                <div class="module-content">
+                    <p>Learn to build and engage audiences across major social platforms.</p>
+                    <ul>
+                        <li>Content Strategy & Calendar</li>
+                        <li>Facebook & Instagram Marketing</li>
+                        <li>LinkedIn B2B Strategies</li>
+                        <li>Social Media Analytics & Reporting</li>
+                    </ul>
+                </div>
+            </details>
+
+            <!-- Module 4 -->
+            <details class="module-card">
+                <summary>
+                    <span class="module-week">Week 9-10</span>
+                    <span class="module-title">Performance Marketing (PPC)</span>
+                    <i data-lucide="chevron-down" class="module-icon"></i>
+                </summary>
+                <div class="module-content">
+                    <p>Run profitable ad campaigns on Google and Meta platforms.</p>
+                    <ul>
+                        <li>Google Ads Setup & Search Campaigns</li>
+                        <li>Display and Video Advertising</li>
+                        <li>Meta Business Manager & Facebook Ads</li>
+                        <li>Retargeting and Conversion Tracking</li>
+                    </ul>
+                </div>
+            </details>
+
+            <!-- Module 5 -->
+            <details class="module-card">
+                <summary>
+                    <span class="module-week">Week 11-12</span>
+                    <span class="module-title">Analytics & Final Project</span>
+                    <i data-lucide="chevron-down" class="module-icon"></i>
+                </summary>
+                <div class="module-content">
+                    <p>Measure success and present a comprehensive Interior Designing plan.</p>
+                    <ul>
+                        <li>Google Analytics 4 (GA4) Mastery</li>
+                        <li>Data Visualization & Reporting</li>
+                        <li>Capstone Project Development</li>
+                        <li>Final Presentation & Review</li>
+                    </ul>
+                </div>
+            </details>
+
+            <div style="text-align: center; margin-top: 4rem;">
+                <a href="contact.html" class="btn btn-primary btn-lg">Enroll in this Course <i data-lucide="arrow-right"></i></a>
+            </div>
+        </div>
     </section>
+
 
     <!-- Footer Section -->
     <footer class="footer">
@@ -221,7 +239,7 @@
                         <li><a href="syllabus-financial-accounting.html">Financial Accounting</a></li>
                         <li><a href="syllabus-office-administration.html">Office Administration</a></li>
                         <li><a href="syllabus-arabic-translation.html">Arabic Translation</a></li>
-                        <li><a href="syllabus-digital-marketing.html">Digital Marketing</a></li>
+                        <li><a href="syllabus-digital-marketing.html">Interior Designing</a></li>
                         <li><a href="syllabus-typewriting.html">English & Arabic Typewriting</a></li>
                         <li><a href="syllabus-spoken-languages.html">Spoken English & Arabic</a></li>
                         <li><a href="syllabus-interior-designing.html">Interior Designing</a></li>
@@ -265,7 +283,7 @@
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
         const navRight = document.getElementById('navRight');
         const menuIcon = document.getElementById('menuIcon');
-
+        
         if (mobileMenuBtn) {
             mobileMenuBtn.addEventListener('click', () => {
                 navRight.classList.toggle('active');
@@ -280,6 +298,12 @@
 
         // Sticky Navbar effect on scroll
         const navbar = document.querySelector('.navbar');
+        
+        // Add scrolled class immediately if page is loaded past top or on short pages
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        }
+
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
                 navbar.classList.add('scrolled');
@@ -287,51 +311,20 @@
                 navbar.classList.remove('scrolled');
             }
         });
-
-        // Contact Form Submission Handler
-        const contactForm = document.querySelector('.contact-form');
-        if (contactForm) {
-            contactForm.addEventListener('submit', (e) => {
-                e.preventDefault();
-                
-                const successMsg = document.getElementById('contact-success-msg');
-                const submitBtn = document.getElementById('contact-submit-btn');
-                const originalBtnText = submitBtn.innerHTML;
-                
-                // Show submitting state
-                submitBtn.disabled = true;
-                submitBtn.innerHTML = 'Sending... <i data-lucide="loader-2" class="lucide-spin"></i>';
-                lucide.createIcons();
-                
-                // Simulate form submission
-                setTimeout(() => {
-                    successMsg.style.display = 'flex';
-                    submitBtn.innerHTML = 'Sent Successfully! <i data-lucide="check"></i>';
-                    lucide.createIcons();
-                    
-                    // Reset form fields
-                    contactForm.reset();
-                    
-                    // Reset button and hide success message after 5 seconds
-                    setTimeout(() => {
-                        successMsg.style.display = 'none';
-                        submitBtn.disabled = false;
-                        submitBtn.innerHTML = originalBtnText;
-                        lucide.createIcons();
-                    }, 5000);
-                }, 1000);
-            });
-        }
+        
+        // For syllabus page, we might want the navbar to always have a solid background
+        // since the header is light, to prevent white text on light bg issues.
+        // Actually the syllabus-header has background-color: var(--color-bg) which is white/light gray.
+        // The navbar links are dark by default, so it's readable. 
+        // When scrolled, navbar gets white background and shadow.
     </script>
     <!-- WhatsApp Floating Icon -->
-    <a href="https://wa.me/918089445307" class="whatsapp-float" target="_blank" rel="noopener noreferrer"
-        aria-label="Chat on WhatsApp">
+    <a href="https://wa.me/918089445307" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
         <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" viewBox="0 0 16 16">
-            <path
-                d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+            <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
         </svg>
     </a>
     <script src="popup.js"></script>
 </body>
-
 </html>
+

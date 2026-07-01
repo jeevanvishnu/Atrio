@@ -86,6 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                         <option value="Arabic Translation">Arabic Translation</option>
                                         <option value="Typing English & Arabic">Typing</option>
                                         <option value="Spoken English & Arabic">Spoken Language</option>
+                                        <option value="Interior Designing">Interior Designing</option>
                                     </select>
                                 </div>
                             </div>
